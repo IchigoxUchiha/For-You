@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #fcf8f2;
+  --bg-secondary: #f6eee3;
+  --bg-card: #ffffff;
+  --bg-paper: #fefdfa;
+  
+  --text-main: #382c26;
+  --text-muted: #796a62;
+  --text-light: #9e8f86;
+  --text-accent: #a35d52;
+  
+  --accent-blush: #f4d3ce;
+  --accent-peach: #f9ded0;
+  --accent-lavender: #e7ddf2;
+  --accent-sage: #dde8dd;
+  --accent-rose: #d99b92;
+  --accent-yellow: #fde047;
+  --accent-butter: #fef08a;
+  --accent-amber: #f59e0b;
+  
+  --border-soft: rgba(138, 117, 107, 0.15);
+  --border-medium: rgba(138, 117, 107, 0.28);
+  
+  --shadow-subtle: 0 4px 20px -2px rgba(67, 50, 41, 0.05);
+  --shadow-card: 0 8px 30px -4px rgba(67, 50, 41, 0.08);
+  --shadow-envelope: 0 12px 36px -6px rgba(67, 50, 41, 0.12);
+  
+  --font-body: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-handwriting: 'Caveat', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  word-spacing: 0.08em;
+  letter-spacing: 0.01em;
+  line-height: 1.65;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  word-spacing: 0.08em;
+  letter-spacing: 0.01em;
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(254, 240, 138, 0.3) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(231, 221, 242, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(249, 222, 208, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(253, 224, 71, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 10% 75%, rgba(254, 249, 195, 0.25) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* Subtle Paper Texture Overlay */
+.paper-grain {
+  background-color: var(--bg-paper);
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Typography Helpers with clear, comfortable word separation */
+p, span, h1, h2, h3, h4, h5, h6, button, div, a {
+  word-spacing: 0.07em;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+  word-spacing: 0.14em;
+  letter-spacing: 0.02em;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+  word-spacing: 0.09em;
+  letter-spacing: 0.012em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  word-spacing: 0.08em;
+}
+
+/* Washi Tape Accent */
+.washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 90px;
+  height: 24px;
+  background: rgba(244, 211, 206, 0.85);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  opacity: 0.9;
+  z-index: 10;
+  clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);
+  backdrop-filter: blur(1px);
+}
+
+.washi-tape.lavender {
+  background: rgba(231, 221, 242, 0.85);
+  transform: translateX(-50%) rotate(1.2deg);
+}
+
+.washi-tape.peach {
+  background: rgba(249, 222, 208, 0.85);
+  transform: translateX(-50%) rotate(-0.8deg);
+}
+
+.washi-tape.yellow {
+  background: rgba(254, 240, 138, 0.9);
+  border-top: 1px dashed rgba(234, 179, 8, 0.35);
+  transform: translateX(-50%) rotate(1deg);
+}
+
+/* Card Flipping Utility */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(246, 238, 227, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(138, 117, 107, 0.25);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 117, 107, 0.4);
+}
+
+/* Interactive Button Base */
+.btn-warm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  min-height: 46px;
+  border-radius: 9999px;
+  background: #fdfaf6;
+  border: 1px solid var(--border-medium);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(67, 50, 41, 0.06);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn-warm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(67, 50, 41, 0.1);
+  background: #ffffff;
+  border-color: rgba(138, 117, 107, 0.4);
+}
+
+.btn-warm:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(67, 50, 41, 0.08);
+}
+
+.btn-warm-primary {
+  background: linear-gradient(135deg, #f7dfd9 0%, #ecd5cf 100%);
+  border: 1px solid rgba(217, 155, 146, 0.4);
+  color: #4a342e;
+}
+
+.btn-warm-primary:hover {
+  background: linear-gradient(135deg, #fae6e1 0%, #f1dcd6 100%);
+  box-shadow: 0 6px 20px rgba(217, 155, 146, 0.3);
+}
+
+/* Envelope Container & Stamp */
+.stamp-box {
+  width: 38px;
+  height: 46px;
+  border: 1.5px dashed rgba(163, 93, 82, 0.4);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(254, 253, 250, 0.8);
+}
+
+/* Post-it / Sticky Note */
+.sticky-note {
+  background: #fffbeb;
+  border: 1px solid rgba(234, 179, 8, 0.2);
+  box-shadow: 0 4px 15px rgba(180, 83, 9, 0.08);
+  border-radius: 2px 2px 8px 2px;
+  transform: rotate(1.5deg);
+  transition: transform 0.3s ease;
+}
+
+.sticky-note:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Safe area support for iOS */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+}
