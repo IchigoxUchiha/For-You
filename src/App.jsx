@@ -16,7 +16,7 @@ export default function App() {
 
   useEffect(() => {
     // Initialize birthday audio
-    const audio = new Audio('/bday.mp3');
+    const audio = new Audio('./bday.mp3');
     audio.loop = true;
     audio.volume = 0.65;
     audioRef.current = audio;

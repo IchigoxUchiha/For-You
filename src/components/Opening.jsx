@@ -41,7 +41,7 @@ export default function Opening({ onOpen }) {
           <div className="bg-white/95 backdrop-blur-xs p-1.5 sm:p-2 pb-2.5 sm:pb-3.5 rounded-xl border border-[#eab308]/40 shadow-[0_10px_24px_rgba(67,50,41,0.12)] transition-transform duration-300 group-hover:scale-108 group-hover:rotate-0 group-hover:shadow-[0_14px_30px_rgba(234,179,8,0.25)]">
             <div className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 aspect-square rounded-lg overflow-hidden bg-[#fefce8] border border-[#8a756b]/15 relative">
               <img
-                src="/assets/opening-photo2.jpeg"
+                src="./assets/opening-photo2.jpeg"
                 alt="Memory Top Left"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -82,7 +82,7 @@ export default function Opening({ onOpen }) {
           <div className="bg-white/95 backdrop-blur-xs p-1.5 sm:p-2 pb-2.5 sm:pb-3.5 rounded-xl border border-[#eab308]/40 shadow-[0_10px_24px_rgba(67,50,41,0.12)] transition-transform duration-300 group-hover:scale-108 group-hover:rotate-0 group-hover:shadow-[0_14px_30px_rgba(234,179,8,0.25)]">
             <div className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 aspect-square rounded-lg overflow-hidden bg-[#fefce8] border border-[#8a756b]/15 relative">
               <img
-                src="/assets/opening-photo3.jpeg"
+                src="./assets/opening-photo3.jpeg"
                 alt="Memory Top Right"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -123,7 +123,7 @@ export default function Opening({ onOpen }) {
           <div className="bg-white/95 backdrop-blur-xs p-1.5 sm:p-2 pb-2.5 sm:pb-3.5 rounded-xl border border-[#eab308]/40 shadow-[0_10px_24px_rgba(67,50,41,0.12)] transition-transform duration-300 group-hover:scale-108 group-hover:rotate-0 group-hover:shadow-[0_14px_30px_rgba(234,179,8,0.25)]">
             <div className="w-16 h-16 sm:w-22 sm:h-22 md:w-26 md:h-26 aspect-square rounded-lg overflow-hidden bg-[#fefce8] border border-[#8a756b]/15 relative">
               <img
-                src="/assets/opening-photo4.jpeg"
+                src="./assets/opening-photo4.jpeg"
                 alt="Memory Bottom Left"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -164,7 +164,7 @@ export default function Opening({ onOpen }) {
           <div className="bg-white/95 backdrop-blur-xs p-1.5 sm:p-2 pb-2.5 sm:pb-3.5 rounded-xl border border-[#eab308]/40 shadow-[0_10px_24px_rgba(67,50,41,0.12)] transition-transform duration-300 group-hover:scale-108 group-hover:rotate-0 group-hover:shadow-[0_14px_30px_rgba(234,179,8,0.25)]">
             <div className="w-16 h-16 sm:w-22 sm:h-22 md:w-26 md:h-26 aspect-square rounded-lg overflow-hidden bg-[#fefce8] border border-[#8a756b]/15 relative">
               <img
-                src="/assets/bottomright.jpeg"
+                src="./assets/bottomright.jpeg"
                 alt="Memory Bottom Right"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -213,7 +213,7 @@ export default function Opening({ onOpen }) {
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 aspect-square rounded-xl bg-gradient-to-tr from-[#fef08a]/40 via-[#ffffff] to-[#fde047]/30 border border-[#8a756b]/20 overflow-hidden flex items-center justify-center">
               {!imageError ? (
                 <img
-                  src="/assets/opening-photo.jpeg"
+                  src="./assets/opening-photo.jpeg"
                   alt="Ân~san"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   style={{ imageRendering: 'auto' }}

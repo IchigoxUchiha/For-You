@@ -110,9 +110,9 @@ class AmbientAudioPlayer {
     this.initAudio();
     this.isPlaying = true;
 
-    // First, try loading /bday.mp3 or /assets/bday.mp3
+    // First, try loading ./bday.mp3 or ./assets/bday.mp3
     if (!this.htmlAudio) {
-      this.htmlAudio = new Audio('/bday.mp3');
+      this.htmlAudio = new Audio('./bday.mp3');
       this.htmlAudio.loop = true;
       this.htmlAudio.volume = 0.6;
     }
